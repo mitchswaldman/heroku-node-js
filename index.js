@@ -11,5 +11,6 @@ var requestListener = function(req, res){
     });
 }
 
+var port = process.env.PORT || 8080;
 var server = http.createServer(requestListener);
-server.listen(8080);
+server.listen(port);
