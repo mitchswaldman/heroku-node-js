@@ -1,7 +1,8 @@
 var http = require('http');
 var fs = require('fs');
+var pathToIndex = __dirname + '/index.html';
 var requestListener = function(req, res){
-    fs.readFile('/home/ubuntu/fundstarter/index.html', 'utf8', function(err, data){
+    fs.readFile(pathToIndex, 'utf8', function(err, data){
 	if(err){
 	    res.writeHead(500);
 	    res.end('No file found.');
